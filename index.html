@@ -36,7 +36,7 @@
 
 <body class="lexend">
     <!-- header start -->
-    <header>
+    <header class="sticky top-0 z-50 bg-[#F9F7F3] bg-opacity-60 backdrop-blur-sm">
         <!-- navigation started -->
         <div class="border border-white bg-[#F9F7F3]">
             <nav class="container mx-auto mb-10 mt-3">
@@ -57,8 +57,8 @@
         </div>
         <!-- navigation end -->
         <!-- donation button start -->
-        <div class="flex justify-center space-x-3 mt-20 mb-10">
-            <button class="btn btn-lg bg-[#B4F461] text-xl">Donation</button>
+        <div class="flex justify-center space-x-3 mt-16 mb-10">
+            <button class="btn btn-lg bg-[#B4F461] text-xl mb-5">Donation</button>
             <button class="btn btn-lg btn-outline text-color1 border-color-2 font-bold">History</button>
         </div>
         <!-- donation button end -->
@@ -85,12 +85,13 @@
                         </p>
                         <input type="text" placeholder="Write Donation Amount"
                             class="input input-bordered w-11/12 h-14" /><br>
-                        <button class="btn btn-lg bg-[#B4F461] text-xl w-11/12">Donate Now</button>
+                        <button id="btn-noakhali-donate" class="btn btn-lg bg-[#B4F461] text-xl w-11/12">Donate Now</button>
                     </div>
                 </div>
             </div>
         </div>
         <!-- first one end -->
+
         <!-- second start -->
         <div>
             <div class="hero border border-color3 rounded-xl mb-10">
@@ -118,6 +119,7 @@
             </div>
         </div>
         <!-- second stop -->
+
         <!-- third start -->
         <div>
             <div class="hero border border-color3 rounded-xl mb-10">
@@ -147,9 +149,11 @@
         <!-- third end -->
     </main>
     <!-- main end -->
-    <footer>
+    
+    <!-- script -->
+     <script src="js/library.js"></script>
+     <script src="js/donation.js"></script>
 
-    </footer>
 </body>
 
 </html>
