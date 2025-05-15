@@ -17,29 +17,8 @@ document.getElementById('btn-noakhali-donate').addEventListener('click', functio
         closeBtn.addEventListener('click', closeSuccessModal);
 
         // history part
-        const now = new Date();
-
-        const weekday = now.toLocaleDateString(undefined, { weekday: 'long' });
-        const formatted = now.toLocaleString(undefined, {
-            dateStyle: 'medium',
-            timeStyle: 'medium',
-            hour12: false,
-        });
-
-        const finalTimeString = `${weekday}, ${formatted}`;
-        const timeTarget = document.getElementById('transaction-time');
-
-        if (timeTarget) {
-            timeTarget.textContent = `Transaction Time: ${finalTimeString}`;
-        }
-
-        const div = document.createElement('div')
-        div.classList.add('border', 'border-color-3', 'rounded-xl', 'm-5');
-        div.innerHTML = `
-             <p class="m-5 font-bold text-3xl">${inputDonation} Taka is Donated for famine-2024 at Feni, Bangladesh</p>
-             <p class="mb-5 text-lg ml-5">${finalTimeString} GMT +0600 (Bangladesh Standard Time)</p>
-        `
-        document.getElementById('history-container').appendChild(div)
+        const text = 'famine-2024 at Feni, Bangladesh'
+        history(inputDonation, text)
 
     }
     else if (inputDonation > accountBalance) {
@@ -73,29 +52,8 @@ document.getElementById('btn-feni-donate').addEventListener('click', function (e
 
 
         // history part
-        const now = new Date();
-
-        const weekday = now.toLocaleDateString(undefined, { weekday: 'long' });
-        const formatted = now.toLocaleString(undefined, {
-            dateStyle: 'medium',
-            timeStyle: 'medium',
-            hour12: false,
-        });
-
-        const finalTimeString = `${weekday}, ${formatted}`;
-        const timeTarget = document.getElementById('transaction-time');
-
-        if (timeTarget) {
-            timeTarget.textContent = `Transaction Time: ${finalTimeString}`;
-        }
-
-        const div = document.createElement('div')
-        div.classList.add('border', 'border-color-3', 'rounded-xl', 'm-5');
-        div.innerHTML = `
-             <p class="m-5 font-bold text-3xl">${inputDonation} Taka is Donated for Flood Relief in Feni,Bangladesh</p>
-             <p class="mb-5 text-lg ml-5">${finalTimeString} GMT +0600 (Bangladesh Standard Time)</p>
-        `
-        document.getElementById('history-container').appendChild(div)
+        const text = 'Flood Relief in Feni,Bangladesh'
+        history(inputDonation, text)
     }
     else if (inputDonation > accountBalance) {
         alert("You don't have sufficiant balance")
@@ -126,29 +84,8 @@ document.getElementById('btn-quota-movement-donate').addEventListener('click', f
         closeBtn.addEventListener('click', closeSuccessModal);
 
         // history part
-        const now = new Date();
-
-        const weekday = now.toLocaleDateString(undefined, { weekday: 'long' });
-        const formatted = now.toLocaleString(undefined, {
-            dateStyle: 'medium',
-            timeStyle: 'medium',
-            hour12: false,
-        });
-
-        const finalTimeString = `${weekday}, ${formatted}`;
-        const timeTarget = document.getElementById('transaction-time');
-
-        if (timeTarget) {
-            timeTarget.textContent = `Transaction Time: ${finalTimeString}`;
-        }
-
-        const div = document.createElement('div')
-        div.classList.add('border', 'border-color-3', 'rounded-xl', 'm-5');
-        div.innerHTML = `
-             <p class="m-5 font-bold text-3xl">${inputDonation} Taka is Donated for Aid for Injured in the Quota Movement, Bangladesh</p>
-             <p class="mb-5 text-lg ml-5">${finalTimeString} GMT +0600 (Bangladesh Standard Time)</p>
-        `
-        document.getElementById('history-container').appendChild(div)
+        const text = 'Aid for Injured in the Quota Movement, Bangladesh'
+        history(inputDonation, text)        
     }
     else if (inputDonation > accountBalance) {
         alert("You don't have sufficiant balance")
